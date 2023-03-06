@@ -1,0 +1,46 @@
+:root {
+    --mincolor: #ff305b
+}
+
+.home {
+    background-image: url(../images/intro-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+
+.overlay-itro {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+}
+.nav-item {
+    position: relative;
+}
+
+.nav-item::after{
+    content:"";
+    width: 0%;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+background-color: var(--mincolor);}
+.nav-item:hover::after{
+width: 50%;
+}
+
+.navbar-nav .nav-link.active{
+color: var( --mincolor);
+}
+h1,
+p {
+    color: white;
+}
+.about .text h2{
+    font-size: 50px;
+    color: #ccc;
+}

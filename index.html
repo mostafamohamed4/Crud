@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container p-5">
+        <form action="">
+            <div class="my-3">
+                <label class="mb-2" for="productName">product name</label>
+                <input id="productName" type="text" class="form-control">
+            </div>
+            <div class="my-3">
+                <label class="mb-2" for="productprice">product price</label>
+                <input id="productprice" type="number" class="form-control">
+            </div>
+            <div class="my-3">
+                <label class="mb-2" for="productCategory">Product Category</label>
+                <select id="productCategory" class="form-control">
+                    <option value="mobile">mobile</option>
+                    <option value="tv">tv</option>
+                    <option value="labtoop">labtoop</option>
+                </select>
+            </div>
+            <div class="my-3">
+                <label class="mb-2" for="productDescription">product Description</label>
+                <textarea name="" id="productDescription" cols="30" rows="10" class="form-control" ></textarea>
+            </div>
+            <div class="my-3">
+                <button onclick="addproduct()" type="button" id="AddProduct" class="btn btn-outline-info">Add
+                    Product</button>
+                <button onclick="editProduct()" style="display:none;" id="EditProduct" type="button"
+                    class="btn btn-outline-info">edit Product</button>
+                <button onclick="clearproduct()" type="button" class="btn btn-outline-danger">clear Product</button>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        <input type="search" onkeyup="searchproduct(this.value)" class="form-control w-50 m-auto ">
+        <table class="table text-center table-striped table-bordered mt-5">
+            <thead>
+                <tr>
+                    <th>product id</th>
+                    <th>product Name</th>
+                    <th>product Price</th>
+                    <th>product Category</th>
+                    <th>product Description</th>
+                    <th>Update </th>
+                    <th> Delete</th>
+                </tr>
+            </thead>
+            <tbody id="TableBody">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
